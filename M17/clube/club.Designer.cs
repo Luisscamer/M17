@@ -32,24 +32,25 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pb_logotipo = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.bt_cancelar = new System.Windows.Forms.Button();
+            this.bt_guardar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.tb_nome = new System.Windows.Forms.TextBox();
+            this.tb_alcunha = new System.Windows.Forms.TextBox();
+            this.tb_estadio = new System.Windows.Forms.TextBox();
+            this.tb_patrocinio = new System.Windows.Forms.TextBox();
+            this.tb_presidente = new System.Windows.Forms.TextBox();
+            this.dtp_fundacao = new System.Windows.Forms.DateTimePicker();
+            this.n_ranking = new System.Windows.Forms.NumericUpDown();
+            this.lb_feedback = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_logotipo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n_ranking)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -86,13 +87,13 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Ano de fundação:";
             // 
-            // pictureBox1
+            // pb_logotipo
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(449, 77);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(326, 300);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.pb_logotipo.Location = new System.Drawing.Point(449, 77);
+            this.pb_logotipo.Name = "pb_logotipo";
+            this.pb_logotipo.Size = new System.Drawing.Size(326, 300);
+            this.pb_logotipo.TabIndex = 4;
+            this.pb_logotipo.TabStop = false;
             // 
             // label5
             // 
@@ -120,23 +121,25 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Imagem do clube:";
             // 
-            // button2
+            // bt_cancelar
             // 
-            this.button2.Location = new System.Drawing.Point(570, 386);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 52);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bt_cancelar.Location = new System.Drawing.Point(570, 386);
+            this.bt_cancelar.Name = "bt_cancelar";
+            this.bt_cancelar.Size = new System.Drawing.Size(88, 52);
+            this.bt_cancelar.TabIndex = 14;
+            this.bt_cancelar.Text = "Cancelar";
+            this.bt_cancelar.UseVisualStyleBackColor = true;
+            this.bt_cancelar.Click += new System.EventHandler(this.bt_cancelar_Click);
             // 
-            // button4
+            // bt_guardar
             // 
-            this.button4.Location = new System.Drawing.Point(684, 386);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(91, 52);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "Guardar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.bt_guardar.Location = new System.Drawing.Point(684, 386);
+            this.bt_guardar.Name = "bt_guardar";
+            this.bt_guardar.Size = new System.Drawing.Size(91, 52);
+            this.bt_guardar.TabIndex = 15;
+            this.bt_guardar.Text = "Guardar";
+            this.bt_guardar.UseVisualStyleBackColor = true;
+            this.bt_guardar.Click += new System.EventHandler(this.bt_guardar_Click);
             // 
             // label9
             // 
@@ -165,84 +168,94 @@
             this.label11.TabIndex = 22;
             this.label11.Text = "Patrocinio :";
             // 
-            // textBox1
+            // tb_nome
             // 
-            this.textBox1.Location = new System.Drawing.Point(116, 58);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 20);
-            this.textBox1.TabIndex = 23;
+            this.tb_nome.Location = new System.Drawing.Point(116, 58);
+            this.tb_nome.Name = "tb_nome";
+            this.tb_nome.Size = new System.Drawing.Size(139, 20);
+            this.tb_nome.TabIndex = 23;
+            this.tb_nome.TextChanged += new System.EventHandler(this.tb_nome_TextChanged);
             // 
-            // textBox2
+            // tb_alcunha
             // 
-            this.textBox2.Location = new System.Drawing.Point(132, 99);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(218, 20);
-            this.textBox2.TabIndex = 24;
+            this.tb_alcunha.Location = new System.Drawing.Point(132, 99);
+            this.tb_alcunha.Name = "tb_alcunha";
+            this.tb_alcunha.Size = new System.Drawing.Size(218, 20);
+            this.tb_alcunha.TabIndex = 24;
             // 
-            // textBox3
+            // tb_estadio
             // 
-            this.textBox3.Location = new System.Drawing.Point(132, 199);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(185, 20);
-            this.textBox3.TabIndex = 25;
+            this.tb_estadio.Location = new System.Drawing.Point(132, 199);
+            this.tb_estadio.Name = "tb_estadio";
+            this.tb_estadio.Size = new System.Drawing.Size(185, 20);
+            this.tb_estadio.TabIndex = 25;
             // 
-            // textBox4
+            // tb_patrocinio
             // 
-            this.textBox4.Location = new System.Drawing.Point(151, 245);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(174, 20);
-            this.textBox4.TabIndex = 26;
+            this.tb_patrocinio.Location = new System.Drawing.Point(151, 245);
+            this.tb_patrocinio.Name = "tb_patrocinio";
+            this.tb_patrocinio.Size = new System.Drawing.Size(174, 20);
+            this.tb_patrocinio.TabIndex = 26;
             // 
-            // textBox5
+            // tb_presidente
             // 
-            this.textBox5.Location = new System.Drawing.Point(138, 349);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(197, 20);
-            this.textBox5.TabIndex = 27;
+            this.tb_presidente.Location = new System.Drawing.Point(138, 349);
+            this.tb_presidente.Name = "tb_presidente";
+            this.tb_presidente.Size = new System.Drawing.Size(197, 20);
+            this.tb_presidente.TabIndex = 27;
             // 
-            // dateTimePicker1
+            // dtp_fundacao
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(170, 147);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 28;
+            this.dtp_fundacao.Location = new System.Drawing.Point(170, 147);
+            this.dtp_fundacao.Name = "dtp_fundacao";
+            this.dtp_fundacao.Size = new System.Drawing.Size(200, 20);
+            this.dtp_fundacao.TabIndex = 28;
             // 
-            // numericUpDown1
+            // n_ranking
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(170, 297);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(72, 20);
-            this.numericUpDown1.TabIndex = 29;
+            this.n_ranking.Location = new System.Drawing.Point(170, 297);
+            this.n_ranking.Name = "n_ranking";
+            this.n_ranking.Size = new System.Drawing.Size(72, 20);
+            this.n_ranking.TabIndex = 29;
+            // 
+            // lb_feedback
+            // 
+            this.lb_feedback.AutoSize = true;
+            this.lb_feedback.Location = new System.Drawing.Point(315, 23);
+            this.lb_feedback.Name = "lb_feedback";
+            this.lb_feedback.Size = new System.Drawing.Size(0, 13);
+            this.lb_feedback.TabIndex = 30;
             // 
             // club
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lb_feedback);
+            this.Controls.Add(this.n_ranking);
+            this.Controls.Add(this.dtp_fundacao);
+            this.Controls.Add(this.tb_presidente);
+            this.Controls.Add(this.tb_patrocinio);
+            this.Controls.Add(this.tb_estadio);
+            this.Controls.Add(this.tb_alcunha);
+            this.Controls.Add(this.tb_nome);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.bt_guardar);
+            this.Controls.Add(this.bt_cancelar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pb_logotipo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "club";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_logotipo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n_ranking)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,21 +267,22 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pb_logotipo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button bt_cancelar;
+        private System.Windows.Forms.Button bt_guardar;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.TextBox tb_alcunha;
+        private System.Windows.Forms.TextBox tb_estadio;
+        private System.Windows.Forms.TextBox tb_patrocinio;
+        private System.Windows.Forms.TextBox tb_presidente;
+        private System.Windows.Forms.DateTimePicker dtp_fundacao;
+        private System.Windows.Forms.NumericUpDown n_ranking;
+        private System.Windows.Forms.Label lb_feedback;
+        public System.Windows.Forms.TextBox tb_nome;
     }
 }

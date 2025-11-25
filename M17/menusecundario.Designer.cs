@@ -31,9 +31,9 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.bt_editar = new System.Windows.Forms.Button();
+            this.bt_apagar = new System.Windows.Forms.Button();
+            this.bt_novo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,43 +62,44 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Clubes:";
             // 
-            // button2
+            // bt_editar
             // 
-            this.button2.Location = new System.Drawing.Point(622, 266);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(166, 76);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Editar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.bt_editar.Location = new System.Drawing.Point(622, 266);
+            this.bt_editar.Name = "bt_editar";
+            this.bt_editar.Size = new System.Drawing.Size(166, 76);
+            this.bt_editar.TabIndex = 4;
+            this.bt_editar.Text = "Editar";
+            this.bt_editar.UseVisualStyleBackColor = true;
+            this.bt_editar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // bt_apagar
             // 
-            this.button1.Location = new System.Drawing.Point(622, 362);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 76);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Apagar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bt_apagar.Location = new System.Drawing.Point(622, 362);
+            this.bt_apagar.Name = "bt_apagar";
+            this.bt_apagar.Size = new System.Drawing.Size(166, 76);
+            this.bt_apagar.TabIndex = 5;
+            this.bt_apagar.Text = "Apagar";
+            this.bt_apagar.UseVisualStyleBackColor = true;
+            this.bt_apagar.Click += new System.EventHandler(this.bt_apagar_Click);
             // 
-            // button3
+            // bt_novo
             // 
-            this.button3.Location = new System.Drawing.Point(622, 171);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(166, 76);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Novo";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.bt_novo.Location = new System.Drawing.Point(622, 171);
+            this.bt_novo.Name = "bt_novo";
+            this.bt_novo.Size = new System.Drawing.Size(166, 76);
+            this.bt_novo.TabIndex = 6;
+            this.bt_novo.Text = "Novo";
+            this.bt_novo.UseVisualStyleBackColor = true;
+            this.bt_novo.Click += new System.EventHandler(this.button3_Click);
             // 
             // menusecundario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.bt_novo);
+            this.Controls.Add(this.bt_apagar);
+            this.Controls.Add(this.bt_editar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
@@ -116,8 +117,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button bt_editar;
+        private System.Windows.Forms.Button bt_apagar;
+        private System.Windows.Forms.Button bt_novo;
     }
 }
