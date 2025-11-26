@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.Data.SqlClient;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace M17.clube
 {
-    public partial class club : Form 
+    public partial class Clube : Form 
     {
         public string nome { get ; set; }
         public string alcunha { get; set; }
@@ -22,8 +23,9 @@ namespace M17.clube
         public string logotipo { get; set; }
         BaseDados bd;
 
-        public club(BaseDados bd)
+        public Clube(BaseDados bd)
         {
+            InitializeComponent();
             this.bd = bd;
         }
 
@@ -64,14 +66,14 @@ namespace M17.clube
         private void bt_guardar_Click(object sender, EventArgs e)
         {
                 //criar um objeto do tipo livro
-                club novo = new club(bd);
+                Clube novo = new Clube(bd);
                 //preencher os dados do livro
                 novo.nome = tb_nome.Text;
                 novo.alcunha = tb_alcunha.Text;
-                novo.fundacao = int.Parse(dtp_fundacao.Text);
+                novo.fundacao = dtp_fundacao.Value.Year;
                 novo.estadio = tb_estadio.Text;
                 novo.patrocinio = tb_patrocinio.Text;
-                novo.ranking = int.Parse(n_ranking.Text);
+                novo.ranking = (int)n_ranking.Value;;
                 novo.presidente = tb_presidente.Text;
                 novo.logotipo = Utils.PastaDoPrograma("M17A_Projeto") + @"\" + novo.nome;
                 //validar os dados
@@ -103,9 +105,9 @@ namespace M17.clube
         }
         public void Adicionar()
         {
-            string sql = @"INSERT INTO Livros(titulo,autor,editora,isbn,ano,data_aquisicao,preco,capa) VALUES 
-                        (@titulo,@autor,@editora,@isbn,@ano,@data_aquisicao,@preco,@capa)";
-            List<SqlParameter> parametros = new List<SqlParameter>()
+            string sql = @"INSERT INTO Clube(nome,alcunha,fundacao,estadio,patrocinio,ranking,presidente,logotipo) VALUES 
+                        (@nome,@alcunha,@fundacao,@estadio,@patrocinio,@ranking,@presidente,@logotipo)";
+           List<SqlParameter> parametros = new List<SqlParameter>()
             {
                 new SqlParameter()
                 {
@@ -162,6 +164,34 @@ namespace M17.clube
         private void bt_cancelar_Click(object sender, EventArgs e)
         {   
             LimparForm();
+        }
+        public void Apagar()
+        {
+            string sql = "DELETE FROM Clube WHERE nome=@nome";
+            List<SqlParameter> parametros = new List<SqlParameter>()
+        {
+            new SqlParameter("@nome", this.nome)
+        };
+            bd.ExecutarSQL(sql, parametros);
+        }
+
+
+        // botao procurar
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ficheiro = new OpenFileDialog();
+            ficheiro.InitialDirectory = "C:\\";
+            ficheiro.Multiselect = false;
+            ficheiro.Filter = "Imagens |*.jpg;*.jpeg;*.png;*.bmp | Todos os ficheiros |*.*";
+            if (ficheiro.ShowDialog() == DialogResult.OK)
+            {
+                string temp = ficheiro.FileName;
+                if (System.IO.File.Exists(temp))
+                {
+                    pb_logotipo.Image = Image.FromFile(temp);
+                    logotipo = temp;
+                }
+            }
         }
     }
 }

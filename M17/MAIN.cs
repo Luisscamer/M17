@@ -12,9 +12,18 @@ namespace M17
 {
     public partial class MAIN : Form
     {
+
+        BaseDados bd;
+
         public MAIN()
         {
             InitializeComponent();
+        }
+
+        private void clubeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            menusecundario menu = new menusecundario(bd);
+            menu.Show();
         }
     }
 }

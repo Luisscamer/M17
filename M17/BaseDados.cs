@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Configuration;
 using Microsoft.Data.SqlClient;
 using System.Data;
+using Microsoft.IdentityModel.Protocols;
 
 namespace M17
 {
@@ -26,7 +27,7 @@ namespace M17
         public BaseDados(string NomeBD)
         {
             this.NomeBD = NomeBD;
-            strligacao = ConfigurationManager.ConnectionStrings["sql"].ToString();
+            strligacao = System.Configuration.ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
             // Verificar a pasta do projeto
             CaminhoBD = Utils.PastaDoPrograma("M17_Projeto");
             CaminhoBD += @"\" + NomeBD + ".mdf";
@@ -78,7 +79,7 @@ namespace M17
             ligacaoSQL.ChangeDatabase(this.NomeBD);
             // criar as tabelas
             // criar tabela livros
-            sql = "";
+            sql = "CREATE TABLE Clube (id_clube INT IDENTITY PRIMARY KEY, nome VARCHAR(100) NOT NULL, alcunha VARCHAR(100),fundacao INT CHECK (fundacao > 0),estadio VARCHAR(150), patrocinio VARCHAR(150),ranking INT,presidente VARCHAR(100), logotipo VARCHAR(500)";
                                
 
 

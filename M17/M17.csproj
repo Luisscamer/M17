@@ -100,6 +100,10 @@
       <HintPath>..\packages\System.ClientModel.1.5.1\lib\netstandard2.0\System.ClientModel.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.10.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
@@ -166,21 +170,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDados.cs" />
-    <Compile Include="clube\cluve.cs" />
-    <Compile Include="clube\club.cs">
+    <Compile Include="clube\Clube.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="clube\club.Designer.cs">
-      <DependentUpon>club.cs</DependentUpon>
+    <Compile Include="clube\Clube.Designer.cs">
+      <DependentUpon>Clube.cs</DependentUpon>
     </Compile>
     <Compile Include="Impressora.cs" />
     <Compile Include="jogo\Class1.cs" />
-    <Compile Include="jogo\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="jogo\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="MAIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,11 +193,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils.cs" />
-    <EmbeddedResource Include="clube\club.resx">
-      <DependentUpon>club.cs</DependentUpon>
+    <EmbeddedResource Include="clube\Clube.resx">
+      <DependentUpon>Clube.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="jogo\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MAIN.resx">
+      <DependentUpon>MAIN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menusecundario.resx">
       <DependentUpon>menusecundario.cs</DependentUpon>

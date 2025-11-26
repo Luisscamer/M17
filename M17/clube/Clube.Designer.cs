@@ -1,6 +1,6 @@
 ﻿namespace M17.clube
 {
-    partial class club
+    partial class Clube
     {
         /// <summary>
         /// Required designer variable.
@@ -49,6 +49,7 @@
             this.dtp_fundacao = new System.Windows.Forms.DateTimePicker();
             this.n_ranking = new System.Windows.Forms.NumericUpDown();
             this.lb_feedback = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logotipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_ranking)).BeginInit();
             this.SuspendLayout();
@@ -91,7 +92,7 @@
             // 
             this.pb_logotipo.Location = new System.Drawing.Point(449, 77);
             this.pb_logotipo.Name = "pb_logotipo";
-            this.pb_logotipo.Size = new System.Drawing.Size(326, 300);
+            this.pb_logotipo.Size = new System.Drawing.Size(326, 222);
             this.pb_logotipo.TabIndex = 4;
             this.pb_logotipo.TabStop = false;
             // 
@@ -226,11 +227,22 @@
             this.lb_feedback.Size = new System.Drawing.Size(0, 13);
             this.lb_feedback.TabIndex = 30;
             // 
-            // club
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(449, 314);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(326, 34);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "Procurar....";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Clube
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lb_feedback);
             this.Controls.Add(this.n_ranking);
             this.Controls.Add(this.dtp_fundacao);
@@ -252,7 +264,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "club";
+            this.Name = "Clube";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pb_logotipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_ranking)).EndInit();
@@ -284,5 +296,6 @@
         private System.Windows.Forms.NumericUpDown n_ranking;
         private System.Windows.Forms.Label lb_feedback;
         public System.Windows.Forms.TextBox tb_nome;
+        private System.Windows.Forms.Button button1;
     }
 }
