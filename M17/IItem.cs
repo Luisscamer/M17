@@ -4,9 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace M17.jogo
+namespace M17
 {
-    internal class Class1
+    internal interface IItem
     {
+        void Adicionar();
+
+        void Apagar();
+
+        List<string> Validar();
     }
 }

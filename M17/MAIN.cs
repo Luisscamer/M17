@@ -18,6 +18,7 @@ namespace M17
         public MAIN()
         {
             InitializeComponent();
+            bd = new BaseDados("Bd_projeto");
         }
 
         private void clubeToolStripMenuItem_Click(object sender, EventArgs e)
