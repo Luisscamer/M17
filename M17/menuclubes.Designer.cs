@@ -1,0 +1,155 @@
+﻿namespace M17
+{
+    partial class menuclubes
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menuclubes));
+            this.dgv_clubes = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.bt_editar = new System.Windows.Forms.Button();
+            this.bt_apagar = new System.Windows.Forms.Button();
+            this.bt_novo = new System.Windows.Forms.Button();
+            this.bt_imprimir = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_clubes)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgv_clubes
+            // 
+            this.dgv_clubes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_clubes.Location = new System.Drawing.Point(12, 42);
+            this.dgv_clubes.Name = "dgv_clubes";
+            this.dgv_clubes.Size = new System.Drawing.Size(591, 396);
+            this.dgv_clubes.TabIndex = 0;
+            this.dgv_clubes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_clubes_CellClick);
+            this.dgv_clubes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(18, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Clubes:";
+            // 
+            // bt_editar
+            // 
+            this.bt_editar.Location = new System.Drawing.Point(622, 149);
+            this.bt_editar.Name = "bt_editar";
+            this.bt_editar.Size = new System.Drawing.Size(166, 76);
+            this.bt_editar.TabIndex = 4;
+            this.bt_editar.Text = "Editar";
+            this.bt_editar.UseVisualStyleBackColor = true;
+            this.bt_editar.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // bt_apagar
+            // 
+            this.bt_apagar.Location = new System.Drawing.Point(622, 258);
+            this.bt_apagar.Name = "bt_apagar";
+            this.bt_apagar.Size = new System.Drawing.Size(166, 76);
+            this.bt_apagar.TabIndex = 5;
+            this.bt_apagar.Text = "Apagar";
+            this.bt_apagar.UseVisualStyleBackColor = true;
+            this.bt_apagar.Click += new System.EventHandler(this.bt_apagar_Click);
+            // 
+            // bt_novo
+            // 
+            this.bt_novo.Location = new System.Drawing.Point(622, 42);
+            this.bt_novo.Name = "bt_novo";
+            this.bt_novo.Size = new System.Drawing.Size(166, 76);
+            this.bt_novo.TabIndex = 6;
+            this.bt_novo.Text = "Novo";
+            this.bt_novo.UseVisualStyleBackColor = true;
+            this.bt_novo.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // bt_imprimir
+            // 
+            this.bt_imprimir.Location = new System.Drawing.Point(622, 362);
+            this.bt_imprimir.Name = "bt_imprimir";
+            this.bt_imprimir.Size = new System.Drawing.Size(166, 76);
+            this.bt_imprimir.TabIndex = 7;
+            this.bt_imprimir.Text = "Imprimir";
+            this.bt_imprimir.UseVisualStyleBackColor = true;
+            this.bt_imprimir.Click += new System.EventHandler(this.bt_imprimir_Click);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // menusecundario
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bt_imprimir);
+            this.Controls.Add(this.bt_novo);
+            this.Controls.Add(this.bt_apagar);
+            this.Controls.Add(this.bt_editar);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgv_clubes);
+            this.Name = "menusecundario";
+            this.Text = "Clubes";
+            this.Activated += new System.EventHandler(this.menusecundario_Load);
+            this.Load += new System.EventHandler(this.menusecundario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_clubes)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.DataGridView dgv_clubes;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button bt_editar;
+        private System.Windows.Forms.Button bt_apagar;
+        private System.Windows.Forms.Button bt_novo;
+        private System.Windows.Forms.Button bt_imprimir;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+    }
+}

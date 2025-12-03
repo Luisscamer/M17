@@ -83,13 +83,29 @@ namespace M17
                     id_clube INT IDENTITY PRIMARY KEY,
                     nome VARCHAR(100) NOT NULL,
                     alcunha VARCHAR(100),
-                    fundacao INT CHECK (fundacao > 0),
+                    fundacao INT ,
                     estadio VARCHAR(150), 
                     patrocinio VARCHAR(150),
                     ranking INT,
                     presidente VARCHAR(100),
                     logotipo VARCHAR(500)
-                    )";
+                    );
+
+                CREATE TABLE Jogador (
+                    idjogador INT IDENTITY PRIMARY KEY,
+                    nome VARCHAR(150) NOT NULL,
+                    data_nascimento DATE NOT NULL CHECK (data_nascimento < GETDATE()),
+                    nacionalidade VARCHAR(100),
+                    posicao VARCHAR(50),
+                    nmr_camisola INT CHECK (nmr_camisola > 0),
+                    clube VARCHAR(100) NOT NULL,
+                    valor_mercado INT,
+                    fotografia VARCHAR(500),
+                    FOREIGN KEY (clube) REFERENCES Clube(nome)
+                );
+
+                
+                ";
 
             //TODO: faltam as tabelas jogos e jogador
             comando = new SqlCommand(sql, ligacaoSQL);

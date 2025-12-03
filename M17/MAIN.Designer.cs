@@ -76,6 +76,7 @@
             this.jogadorToolStripMenuItem.Name = "jogadorToolStripMenuItem";
             this.jogadorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.jogadorToolStripMenuItem.Text = "Jogador";
+            this.jogadorToolStripMenuItem.Click += new System.EventHandler(this.jogadorToolStripMenuItem_Click);
             // 
             // jogoToolStripMenuItem
             // 

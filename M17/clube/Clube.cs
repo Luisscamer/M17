@@ -206,10 +206,11 @@ namespace M17.clube
         {
             string sql = "DELETE FROM Clube WHERE nome=@nome";
             List<SqlParameter> parametros = new List<SqlParameter>()
-        {
+            {
             new SqlParameter("@nome", this.nome)
-        };
+            };
             bd.ExecutarSQL(sql, parametros);
         }
+
     }
 }

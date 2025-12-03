@@ -23,7 +23,13 @@ namespace M17
 
         private void clubeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            menusecundario menu = new menusecundario(bd);
+            menuclubes menu = new menuclubes(bd);
+            menu.Show();
+        }
+
+        private void jogadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            menujogadores menu  = new menujogadores(bd);
             menu.Show();
         }
     }

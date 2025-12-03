@@ -17,7 +17,7 @@ namespace M17.clube
         BaseDados bd;
         string nomeselecionado;
         int id_editar = 0;
-        menusecundario m;
+        menuclubes m;
         string logotipo = "";
 
 
@@ -30,7 +30,7 @@ namespace M17.clube
         //    this.nomeselecionado = clubeSelecionado;
         //    this.m = m;
         //}
-        public f_clube(BaseDados bd, int id,menusecundario m,string clubeSelecionado)
+        public f_clube(BaseDados bd, int id,menuclubes m,string clubeSelecionado)
         {
             InitializeComponent();
             this.bd = bd;
@@ -43,6 +43,7 @@ namespace M17.clube
         {
             InitializeComponent();
             this.bd = bd;
+            
         }
 
         // limpar form 
@@ -106,8 +107,9 @@ namespace M17.clube
                 //feedback user
                 lb_feedback.Text = "Clube adicionado com sucesso.";
                 lb_feedback.ForeColor = Color.Black;
-                m.Show();
                 this.Close();
+                menuclubes menu = new menuclubes(bd);
+                menu.Show();
 
             }
             else
@@ -121,9 +123,12 @@ namespace M17.clube
                 novo.ranking = (int)n_ranking.Value;
                 novo.presidente = tb_presidente.Text;
                 novo.logotipo = logotipo;
-                m.Show();
-                this.Close();
                 novo.Editar();
+                this.Close();
+                menuclubes menu = new menuclubes(bd);
+                menu.Show();
+
+
             }
 
         }
@@ -131,7 +136,7 @@ namespace M17.clube
         {
             LimparForm();
             this.Hide();
-            menusecundario menu = new menusecundario(bd);
+            menuclubes menu = new menuclubes(bd);
             menu.Show();
         }
 
@@ -159,7 +164,6 @@ namespace M17.clube
             if (dados.Rows.Count == 0) return;
 
             DataRow linha = dados.Rows[0];
-
             tb_nome.Text = linha["nome"].ToString();
             tb_alcunha.Text = linha["alcunha"].ToString();
             int ano = int.Parse(linha["fundacao"].ToString());

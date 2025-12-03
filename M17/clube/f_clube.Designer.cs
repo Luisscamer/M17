@@ -98,7 +98,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Location = new System.Drawing.Point(72, 23);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 23);
             this.label5.TabIndex = 17;
@@ -173,7 +173,7 @@
             // 
             this.tb_nome.Location = new System.Drawing.Point(116, 58);
             this.tb_nome.Name = "tb_nome";
-            this.tb_nome.Size = new System.Drawing.Size(139, 20);
+            this.tb_nome.Size = new System.Drawing.Size(234, 20);
             this.tb_nome.TabIndex = 23;
             this.tb_nome.TextChanged += new System.EventHandler(this.tb_nome_TextChanged);
             // 
@@ -188,35 +188,35 @@
             // 
             this.tb_estadio.Location = new System.Drawing.Point(132, 199);
             this.tb_estadio.Name = "tb_estadio";
-            this.tb_estadio.Size = new System.Drawing.Size(185, 20);
+            this.tb_estadio.Size = new System.Drawing.Size(218, 20);
             this.tb_estadio.TabIndex = 25;
             // 
             // tb_patrocinio
             // 
             this.tb_patrocinio.Location = new System.Drawing.Point(151, 245);
             this.tb_patrocinio.Name = "tb_patrocinio";
-            this.tb_patrocinio.Size = new System.Drawing.Size(174, 20);
+            this.tb_patrocinio.Size = new System.Drawing.Size(199, 20);
             this.tb_patrocinio.TabIndex = 26;
             // 
             // tb_presidente
             // 
             this.tb_presidente.Location = new System.Drawing.Point(138, 349);
             this.tb_presidente.Name = "tb_presidente";
-            this.tb_presidente.Size = new System.Drawing.Size(197, 20);
+            this.tb_presidente.Size = new System.Drawing.Size(212, 20);
             this.tb_presidente.TabIndex = 27;
             // 
             // dtp_fundacao
             // 
             this.dtp_fundacao.Location = new System.Drawing.Point(170, 147);
             this.dtp_fundacao.Name = "dtp_fundacao";
-            this.dtp_fundacao.Size = new System.Drawing.Size(200, 20);
+            this.dtp_fundacao.Size = new System.Drawing.Size(180, 20);
             this.dtp_fundacao.TabIndex = 28;
             // 
             // n_ranking
             // 
             this.n_ranking.Location = new System.Drawing.Point(170, 297);
             this.n_ranking.Name = "n_ranking";
-            this.n_ranking.Size = new System.Drawing.Size(72, 20);
+            this.n_ranking.Size = new System.Drawing.Size(180, 20);
             this.n_ranking.TabIndex = 29;
             // 
             // lb_feedback
@@ -237,7 +237,7 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Clube
+            // f_clube
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -264,7 +264,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Clube";
+            this.Name = "f_clube";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pb_logotipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_ranking)).EndInit();
